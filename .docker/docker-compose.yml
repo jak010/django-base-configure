@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  sample_db:
+  sample_local_db:
     image: mysql:8.0.40-debian
     platform: linux/amd64
     ports:
