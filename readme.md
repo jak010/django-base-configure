@@ -1,6 +1,6 @@
 # Django SandBox Template
 
-- `Last Update`: 2023.06.18
+- `Last Update`: 2025.06.20
 
 ## TOC
 
@@ -14,8 +14,7 @@
 
 ### Requirement
 
-- Python 3.11.5
-- Ref, `requirements.txt`
+- `Python` 3.11.5
 
 ### Structure
 
