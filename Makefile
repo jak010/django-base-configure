@@ -5,6 +5,10 @@ DJANGO_SETTINGS_MODULE=config.settings.local
 
 DJANGO_SETTINGS = --settings=$(DJANGO_SETTINGS_MODULE)
 
+
+init:
+	export PYTHONPATH=$(PWD):$(PWD)/src
+
 run.docker:
 	docker-compose -f ./.docker/docker-compose.yml up
 
@@ -13,8 +17,8 @@ run.local:
 
 # Django Command
 
-migrations:
-	python $(SOURCE)/manage.py makemigrations $(DJANGO_SETTINGS)
+migrations: init
+	python ./src/manage.py makemigrations $(DJANGO_SETTINGS)
 
 migrate:
-	python $(SOURCE)/manage.py migrate $(DJANGO_SETTINGS)
+	python ./src/manage.py migrate $(DJANGO_SETTINGS)

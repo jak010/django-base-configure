@@ -3,9 +3,17 @@
 import os
 import sys
 
+BASE_DIR = os.path.join(os.path.dirname(__file__), '..')
+ROOT_DIR = os.path.join(BASE_DIR, "..")
+
 
 def main():
     """Run administrative tasks."""
+
+    # sys.path.append(BASE_DIR)
+    # sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+    # sys.path.append(ROOT_DIR)
+
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.local')
     try:
         from django.core.management import execute_from_command_line

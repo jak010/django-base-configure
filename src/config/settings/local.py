@@ -40,9 +40,8 @@ USE_TZ = True
 
 # INSTALLED_APPS
 DEVELOP_APPS = [
+    "apps",
     'django_extensions',
-    'apps',
-
 ]
 
 INSTALLED_APPS = INSTALLED_APPS + DEVELOP_APPS

@@ -1,9 +1,11 @@
 from django.db import models
 
+from .abstract import TimestampModel
 
-# Create your models here.
 
+class Sample(TimestampModel):
+    class Meta:
+        db_table = "sample"
 
-class Sample(models.Model):
     sample_id = models.AutoField(primary_key=True)
     desc = models.CharField(max_length=100)
