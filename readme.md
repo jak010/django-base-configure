@@ -18,8 +18,18 @@
 
 # Structure
 
+## Feature
+
+- `Pytest-DJango`
+  - https://pytest-django.readthedocs.io/en/latest/
+- `SRC LAYOUT`
+  - https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/
+
+## SOURCE TREE
+
 - SOURCE TREE
     ```text
+    ╰─$ tree -L 4 -I "*.pyc" -I "__pycache__" -I "venv"
     .
     ├── Makefile
     ├── readme.md
@@ -31,9 +41,11 @@
         │   ├── admin.py
         │   ├── apps.py
         │   ├── migrations
+        │   │   ├── 0001_initial.py
         │   │   └── __init__.py
         │   ├── models
         │   │   ├── __init__.py
+        │   │   ├── abstract.py
         │   │   └── sample.py
         │   ├── tests.py
         │   ├── urls.py
@@ -49,5 +61,11 @@
         │   │   └── local.py
         │   ├── urls.py
         │   └── wsgi.py
-        └── manage.py
+        ├── manage.py
+        ├── pytest.ini
+        └── test
+            ├── __init__.py
+            ├── conftest.py
+            └── test_sample.py
+
     ```
